@@ -68,8 +68,7 @@
         "Username" : "user1",
         "Client Certificate Authentication Enabled" : "false",
         "Remove Curly Braces" : "False",
-        "Batch Size" : "10",
-        "Password" : "#{mq-password}"
+        "Batch Size" : "10"
       },
       "propertyDescriptors" : {
         "Max Inbound Message Body Size" : {
@@ -233,6 +232,6 @@
   "snapshotMetadata" : {
     "author" : "admin",
     "flowIdentifier" : "bla",
-    "timestamp" : 1795172489000
+    "timestamp" : 1795172987437
   }
 }
