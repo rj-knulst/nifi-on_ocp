@@ -27,6 +27,7 @@
     "maxConcurrentTasks" : 1,
     "name" : "bla",
     "outputPorts" : [ ],
+    "parameterContextName" : "bla_PC",
     "position" : {
       "x" : 0.0,
       "y" : 0.0
@@ -51,8 +52,8 @@
       "name" : "ConsumeAMQP",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : -346.0,
-        "y" : -251.5
+        "x" : -512.0,
+        "y" : -272.0
       },
       "properties" : {
         "Max Inbound Message Body Size" : "64 MB",
@@ -67,7 +68,8 @@
         "Username" : "user1",
         "Client Certificate Authentication Enabled" : "false",
         "Remove Curly Braces" : "False",
-        "Batch Size" : "10"
+        "Batch Size" : "10",
+        "Password" : "#{mq-password}"
       },
       "propertyDescriptors" : {
         "Max Inbound Message Body Size" : {
@@ -213,11 +215,24 @@
   },
   "flowEncodingVersion" : "1.0",
   "latest" : false,
-  "parameterContexts" : { },
+  "parameterContexts" : {
+    "bla_PC" : {
+      "componentType" : "PARAMETER_CONTEXT",
+      "description" : "",
+      "inheritedParameterContexts" : [ ],
+      "name" : "bla_PC",
+      "parameters" : [ {
+        "description" : "",
+        "name" : "mq-password",
+        "provided" : false,
+        "sensitive" : true
+      } ]
+    }
+  },
   "parameterProviders" : { },
   "snapshotMetadata" : {
     "author" : "admin",
     "flowIdentifier" : "bla",
-    "timestamp" : 1795172096292
+    "timestamp" : 1795172489000
   }
 }
