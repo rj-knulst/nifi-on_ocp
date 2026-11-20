@@ -32,7 +32,181 @@
       "y" : 0.0
     },
     "processGroups" : [ ],
-    "processors" : [ ],
+    "processors" : [ {
+      "autoTerminatedRelationships" : [ ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-amqp-nar",
+        "group" : "org.apache.nifi",
+        "version" : "2.6.0.4.12.0.1-9"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "e7cc151a-36ee-3624-b246-dcdf5078cdb7",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "ConsumeAMQP",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : -346.0,
+        "y" : -251.5
+      },
+      "properties" : {
+        "Max Inbound Message Body Size" : "64 MB",
+        "Port" : "5672",
+        "Header Key Prefix" : "consume.amqp",
+        "Auto-Acknowledge Messages" : "false",
+        "Host Name" : "localhost",
+        "Prefetch Count" : "0",
+        "Header Separator" : ",",
+        "AMQP Version" : "0.9.1",
+        "Header Output Format" : "Comma-Separated String",
+        "Username" : "user1",
+        "Client Certificate Authentication Enabled" : "false",
+        "Remove Curly Braces" : "False",
+        "Batch Size" : "10"
+      },
+      "propertyDescriptors" : {
+        "Max Inbound Message Body Size" : {
+          "displayName" : "Max Inbound Message Body Size",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Max Inbound Message Body Size",
+          "sensitive" : false
+        },
+        "Port" : {
+          "displayName" : "Port",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Port",
+          "sensitive" : false
+        },
+        "Brokers" : {
+          "displayName" : "Brokers",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Brokers",
+          "sensitive" : false
+        },
+        "Header Key Prefix" : {
+          "displayName" : "Header Key Prefix",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Header Key Prefix",
+          "sensitive" : false
+        },
+        "Auto-Acknowledge Messages" : {
+          "displayName" : "Auto-Acknowledge Messages",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Auto-Acknowledge Messages",
+          "sensitive" : false
+        },
+        "Host Name" : {
+          "displayName" : "Host Name",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Host Name",
+          "sensitive" : false
+        },
+        "SSL Context Service" : {
+          "displayName" : "SSL Context Service",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "SSL Context Service",
+          "sensitive" : false
+        },
+        "Prefetch Count" : {
+          "displayName" : "Prefetch Count",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Prefetch Count",
+          "sensitive" : false
+        },
+        "Header Separator" : {
+          "displayName" : "Header Separator",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Header Separator",
+          "sensitive" : false
+        },
+        "AMQP Version" : {
+          "displayName" : "AMQP Version",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "AMQP Version",
+          "sensitive" : false
+        },
+        "Header Output Format" : {
+          "displayName" : "Header Output Format",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Header Output Format",
+          "sensitive" : false
+        },
+        "Virtual Host" : {
+          "displayName" : "Virtual Host",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Virtual Host",
+          "sensitive" : false
+        },
+        "Username" : {
+          "displayName" : "Username",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Username",
+          "sensitive" : false
+        },
+        "Client Certificate Authentication Enabled" : {
+          "displayName" : "Client Certificate Authentication Enabled",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Client Certificate Authentication Enabled",
+          "sensitive" : false
+        },
+        "Remove Curly Braces" : {
+          "displayName" : "Remove Curly Braces",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Remove Curly Braces",
+          "sensitive" : false
+        },
+        "Batch Size" : {
+          "displayName" : "Batch Size",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Batch Size",
+          "sensitive" : false
+        },
+        "Queue" : {
+          "displayName" : "Queue",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Queue",
+          "sensitive" : false
+        },
+        "Password" : {
+          "displayName" : "Password",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Password",
+          "sensitive" : true
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 0,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.amqp.processors.ConsumeAMQP",
+      "yieldDuration" : "1 sec"
+    } ],
     "remoteProcessGroups" : [ ],
     "scheduledState" : "ENABLED",
     "statelessFlowTimeout" : "1 min"
@@ -44,6 +218,6 @@
   "snapshotMetadata" : {
     "author" : "admin",
     "flowIdentifier" : "bla",
-    "timestamp" : 1795104029426
+    "timestamp" : 1795172096292
   }
 }
